@@ -52,7 +52,8 @@ namespace SmartParking.Models
         [Display(Name = "Email")]
         [EmailAddress]
         public string Email { get; set; }
-        [Display(Name = "Username"), Required]
+        [Display(Name = "Username")]
+        [Required]
         public string Username { get; set; }
 
         [Required]
@@ -86,6 +87,8 @@ namespace SmartParking.Models
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
         public bool Gender { get; set; }
+        [Display(Name ="Phone Number")]
+        public string PhoneNumber { get; set; }
     }
 
     public class ResetPasswordViewModel
